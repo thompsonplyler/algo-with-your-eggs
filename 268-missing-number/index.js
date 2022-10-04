@@ -20,10 +20,9 @@ const missingNumber = (nums) => {
 
   const obj = {};
   let missing = sorted.length;
-
-  if (input.length == 0) {
-    return 0;
-  }
+  if (sorted.length == 1 && sorted[0]==0) {return 1 }
+  if (sorted[0] != 0) {return 0}
+    
 
   sorted.forEach((n, idx) => {
     obj[idx] = n;

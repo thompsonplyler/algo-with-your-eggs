@@ -39,3 +39,21 @@ const test = test2;
 const answer = missingNumber(test);
 
 console.log(answer == test.output ? "Success" : "Fail");
+
+/*
+
+Optimal solution from The Internet using Gauss's Solution:
+
+ 
+const missingNumber = function(nums) {
+
+    
+    let expectedSum = nums.length*(nums.length+1)/2;
+    let actualSum = 0;
+    for (let number of nums){
+        actualSum += number
+    }
+    return expectedSum-actualSum
+};
+
+*/

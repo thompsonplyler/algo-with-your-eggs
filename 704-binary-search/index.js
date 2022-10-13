@@ -14,7 +14,23 @@ const input2 = { nums: [-1, 0, 3, 5, 9, 12], target: 2, output: -1 };
 
 const search = (input) => {
   const { nums, target } = input;
-  /* Insert code here. */
+
+  let left = 0;
+  let right = nums.length - 1;
+
+  let check;
+  while (left <= right) {
+    check = Math.floor((left + right) / 2);
+    if (nums[check] == target) {
+      return check;
+    } else if (nums[check] < target) {
+      left = check + 1;
+    } else {
+      right = check - 1;
+    }
+  }
+
+  return -1;
 };
 
 const input = input1;
